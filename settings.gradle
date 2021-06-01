@@ -1,2 +1,4 @@
+include ':livedata'
+include ':lifecycle'
 include ':app'
 rootProject.name = "Examples"
