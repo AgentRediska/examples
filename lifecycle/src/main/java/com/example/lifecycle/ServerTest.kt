@@ -23,4 +23,10 @@ private const val TAG="serverTest"
             Log.d(TAG, "Server is disconnected")
         }
 
+        //will work in every method life cycle
+        @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
+        fun check(){
+            Log.d(TAG, "Server is checked")
+        }
+
  }

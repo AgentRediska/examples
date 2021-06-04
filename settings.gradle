@@ -1,3 +1,4 @@
+include ':livedata_test'
 include ':livedata'
 include ':lifecycle'
 include ':app'
