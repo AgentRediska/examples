@@ -17,6 +17,8 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        println(arguments?.getString("key"))
+
         val view: View= inflater.inflate(R.layout.fragment_second, container, false)
         btn_go_to_first_fragment=view.findViewById(R.id.btn_go_to_first_fragment)
         btn_go_to_first_fragment.setOnClickListener {
