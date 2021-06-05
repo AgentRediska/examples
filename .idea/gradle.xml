@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/lifecycle" />
             <option value="$PROJECT_DIR$/livedata" />
             <option value="$PROJECT_DIR$/livedata_test" />
+            <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/view_livedata_viewmodel_test" />
           </set>
         </option>
