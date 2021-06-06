@@ -15,6 +15,13 @@
         android:textSize="24sp"
         android:textColor="@color/black" />
 
+    <TextView
+        android:id="@+id/text_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black" />
+
     <Button
         android:id="@+id/btn_go_to_first_fragment"
         android:layout_width="match_parent"

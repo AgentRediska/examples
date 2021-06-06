@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 
 class FirstFragment : Fragment() {
 
@@ -19,11 +20,15 @@ class FirstFragment : Fragment() {
        val view: View= inflater.inflate(R.layout.fragment_first, container, false)
         btn_go_to_second_fragment=view.findViewById(R.id.btn_go_to_second_fragment)
         btn_go_to_second_fragment.setOnClickListener {
+/*
             var bundle = Bundle()
             bundle.putString("key", "Hello")
             (activity as MainActivity)
                 .navController.navigate(R.id.action_firstFragment_to_secondFragment,
                 bundle)
+*/
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("HELLO FROM First_frag")
+            Navigation.findNavController(view).navigate(action)
         }
         return view
     }
