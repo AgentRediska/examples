@@ -1,3 +1,4 @@
+include ':room'
 include ':navigation'
 include ':view_livedata_viewmodel_test'
 include ':livedata_test'
