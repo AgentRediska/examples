@@ -26,18 +26,17 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnDeliveryByTruck.setOnClickListener {
             flag="Truck"
-            factory.initializeFactoryType(flag)
             startTransaction()
         }
 
         binding.btnDeliveryByShip.setOnClickListener {
          flag="Ship"
-            factory.initializeFactoryType(flag)
             startTransaction()
         }
     }
 
     private fun startTransaction(){
+        factory.initializeFactoryType(flag)
         setTextDeliveryMethod(factory.start())
     }
 
