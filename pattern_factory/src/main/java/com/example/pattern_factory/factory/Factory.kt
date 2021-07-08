@@ -4,6 +4,12 @@ import com.example.pattern_factory.trasport.Transport
 
 abstract class Factory {
 
-  abstract  fun createTransport(): Transport
+   fun initializeFactoryType(flag: String):Factory{
+     return if(flag=="Truck"){
+       TruckFactory()
+     }else ShipFactory()
+  }
+
+  abstract  fun start(): String
 
 }

@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var factory: Factory
+    private lateinit var flag: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,31 +23,26 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnDeliveryByTruck.setOnClickListener {
-            factory = TruckFactory()
-            orderRegistration(factory)
+            flag="Truck"
+            factory.initializeFactoryType(flag)
+            startTransaction()
         }
 
         binding.btnDeliveryByShip.setOnClickListener {
-            factory= ShipFactory()
-            orderRegistration(factory)
+         flag="Ship"
+            factory.initializeFactoryType(flag)
+            startTransaction()
         }
     }
 
-    private fun orderRegistration(factory: Factory){
-        when(val transport: Transport = factory.createTransport()){
-            is Truck -> {transport.transportationByRoad()
-                setTextDeliveryMethod("Truck")
-            }
-            is Ship -> {transport.transportationByRiver()
-                setTextDeliveryMethod("Ship")
-            }
-            else -> print("Error")
-        }
+    private fun startTransaction(){
+        setTextDeliveryMethod(factory.start())
     }
 
     private fun setTextDeliveryMethod(transportType: String){
-        binding.textDeliveryMethod.text="The $transportType is carrying cargo"
+        binding.textDeliveryMethod.text= transportType
     }
 
 }

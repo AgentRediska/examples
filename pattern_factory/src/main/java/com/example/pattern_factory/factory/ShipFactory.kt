@@ -4,7 +4,7 @@ import com.example.pattern_factory.trasport.Ship
 import com.example.pattern_factory.trasport.Transport
 
 class ShipFactory: Factory() {
-    override fun createTransport(): Transport {
-        return Ship()
+    override fun start(): String {
+        return "the ship is on its way"
     }
 }
