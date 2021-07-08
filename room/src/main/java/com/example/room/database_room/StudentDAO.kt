@@ -28,5 +28,5 @@ interface StudentDAO {
     fun insertBothStudents( student1: Student, student2: Student)
 
     @Delete
-    fun delete(student: Student)
+    fun deleteStudent(student: Student)
 }

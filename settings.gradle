@@ -1,3 +1,5 @@
+include ':pattern_factory'
+include ':view_binding'
 include ':room'
 include ':navigation'
 include ':view_livedata_viewmodel_test'
